@@ -3,14 +3,9 @@ const Traveller = function(journeys) {
 };
 
 Traveller.prototype.getJourneyStartLocations = function() {
-  //GOAL: I want to return an array of all the startLocations
-  // create new variable journeyStartLocations
-  // value of the variable an arrow function that applies map method on array 
-    const journeyStartLocations = this.journeys.map((journey) => {
-  // return "journey.startLocation"      
+    const journeyStartLocations = this.journeys.map((journey) => {  
       return journey.startLocation; 
     });
-  // return variable journeyStartLocations outside of the loop in order to return the desired array.
     return journeyStartLocations;
 };
 
