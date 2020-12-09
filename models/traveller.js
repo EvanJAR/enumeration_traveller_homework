@@ -37,8 +37,14 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
     };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
+  // i want to loop through each journey, grab transport, add it to a new array, return the new array
+    const journeyTransport = this.journeys.map((journey) => {  
+      return journey.transport; 
+    });
+    const result = Array.from(new Set(journeyTransport));
+    return result;
 };
+
 
 
 module.exports = Traveller;
